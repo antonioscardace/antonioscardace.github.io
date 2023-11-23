@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url(../fonts/sf-pro-text_regular.woff2) format('woff2'),
+         url(../fonts/sf-pro-text_semibold.woff2) format('woff2'),
+         url(../fonts/sf-pro-bold.woff2) format('woff2');
+    font-display: swap;
+}
+
+@keyframes load {
+    50% {
+        height: 42px;
+   }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    font-family: "SF Pro Text", "Roboto", "Arial", sans-serif;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+:root {
+    --main-bg-red: #da4c3c;
+    --main-bg-white: #f2f2f2;
+    --main-text-black: #1d1d1f;
+    --main-text-gray: #86868b;
+    --main-btn-blu: #0171e3;
+
+    --enorme-text: 80px;
+    --molto-grande-text: 64px;
+    --grande-text: 40px;
+    --descr-text: 28px;
+    --normal-text: 19px;
+    --btn-text: 17px;
+    --details-text: 14px;
+    --rule-text: 12px; 
+}
+
+::-webkit-scrollbar {
+    z-index: 15;
+    width: 15px
+}
+::-webkit-scrollbar-track {
+    background: #fff
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main-bg-red);
+    border: 4px solid #fff
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(187, 65, 51);
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: var(--main-text-black);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+  
+.blink {
+    color: var(--main-text-black);
+    animation: blink .7s infinite;
+    opacity: 1;
+}
+
+.connect {
+    width: 100%;
+    height: auto;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    
+    background: var(--main-bg-red);
+    text-align: center !important
+}
+.connect .bye {
+    width: 98.4%;
+    margin-left: 50%;
+    transform: translateX(-50%)
+}
+.connect a {
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    border: 2px solid #fff;
+    margin: 0 10px;
+    transition: .3s ease;
+    cursor: pointer
+}
+.connect i {
+    padding-top: 13px
+}
+.connect a:hover {
+    background: #fff;
+    color: var(--main-bg-red);
+}
+.connect h5 {
+    font-size: 18px!important;
+    color: rgba(255, 255, 255, .6);
+    letter-spacing: 1px;
+
+    margin-top: 1.2rem
+}
+
+.realPage {
+    display: none;
+}
+.realPage * {
+    opacity: 0;
+}
+
+.loading-page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.loading-page .loader-block {
+    animation: spin 2s linear infinite;
+}
+.loader {
+    width: 14px;
+    height: 14px;
+    transform: rotate(75deg);
+}
+.loader::before, .loader::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    animation: load 1.2s linear infinite;
+}
+.loader::before {
+    box-shadow: 18px 18px #f3dfa2, -18px -18px #448fa3;
+}
+.loader::after {
+    box-shadow: 18px 18px #d7263d, -18px -18px #02182b;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.loading-page p {
+    font-size: 18px;
+    position: absolute;
+    margin-top: 10rem;
+}
+
+@media (min-width: 320px) and (max-width: 384px) {
+    .connect {
+        padding-top: 5.5rem;
+        padding-bottom: 5rem
+    }
+    .connect h3 {
+        font-size: 18px;
+        margin-bottom: 1rem
+    }
+    .connect h3 {
+        font-size: 18px;
+        margin-bottom: 1rem
+    }
+    .connect a {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+        margin: 0 8px
+    }
+    .connect i {
+        padding-top: 12px
+    }
+    .connect h5 {
+        font-size: 16px!important;
+        margin-top: 1rem
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .loader {
+        margin-top: 65%!important;
+        transform: translate(-50%, -65%)!important;
+    }
+}

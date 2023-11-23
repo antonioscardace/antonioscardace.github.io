@@ -1,0 +1,493 @@
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-25px)
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: var(--main-text-black);
+    }
+    50% {
+        color: transparent
+    }  
+    100% {
+        color: var(--main-text-black);
+    }
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.home .middle {
+    width: 100%;
+    top: 17%;
+    transform: translateY(-17%);
+    position: absolute;
+    text-align: center
+}
+.home .middle h1 {
+    font-size: 45px;
+    margin-bottom: .4rem;
+    letter-spacing: .1px;
+    font-weight: 800;
+}
+.home .middle h2 {
+    color: var(--main-bg-red);
+    font-size: 32px;
+    letter-spacing: .6px;
+    font-weight: 800
+}
+.home .middle h4 {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: .8rem
+}
+.home img {
+    margin-top: 16px;
+    width: 130px
+}
+.home .scroll {
+    font-size: 28px;
+    text-align: center;
+    color: var(--main-text-black) !important;
+    cursor: pointer;
+    width: 100%;
+    bottom: 10px;
+    position: absolute;
+    animation: bounce 2s infinite;
+}
+.home .scroll .scroll-down-desktop {
+    letter-spacing: 4px;
+    font-size: 17px
+}
+.home .scroll .scroll-down-mobile {
+    display: none
+}
+
+.presentation {
+    width: 100%;
+    height: auto;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+    background: var(--main-bg-red);
+    color: #fff;
+    position: relative
+}
+.presentation .container {
+    text-align: center;
+}
+.presentation .container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+.presentation .container h4 {
+    font-size: 17px;
+    text-align: justify;
+    word-break: normal;
+
+    line-height: 1.5;
+    opacity: 0;
+}
+
+.projects {
+    width: 100%;
+    height: auto;
+    padding-top: 7.5rem;
+    padding-bottom: 8.9rem;
+    background: #fff;
+    color: var(--main-text-black);
+    position: relative
+}
+.projects h1 {
+    font-size: 36px;
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+.projects .row {
+    width: 100%;
+}
+.projects .row .cardBox .card {
+    width: 97%;
+    margin-left: 1.5%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 13px 0 rgba(0,0,0,.2);
+    transition: all .33s ease-in-out
+}
+.projects .row .cardBox .card:hover {
+    transform: translateY(-13px);
+    box-shadow: 0px 15px 13px 3px rgba(0,0,0,.2)
+}
+.projects .row .cardBox .card .card-img-to {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.projects .row .cardBox .card .card-body h3 {
+    font-size: 22px;
+    letter-spacing: .2px;
+    font-weight: 600
+}
+.projects .row .cardBox .card .card-body h4 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    color: var(--main-bg-red)
+}
+.projects .row .cardBox .card .card-body h5 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.9px;
+    color: var(--main-text-black)
+}
+.projects .row .cardBox .card .card-body p {
+    font-size: 14px;
+    color: var(--main-text-gray);
+    text-align: justify;
+    word-break: normal
+}
+
+.publications {
+    width: 100%;
+    height: auto;
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+    background: #fff;
+    border-top: 1px solid rgba(187, 187, 187, 0.616);
+    color: var(--main-text-black);
+    position: relative
+}
+.publications .container {
+    text-align: center;
+}
+.publications .container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+.publications .container .publication {
+    width: 92%;
+    margin-left: 4%;
+}
+.publications .container .publication .circle {
+    border-radius: 400px;
+    width: fit-content;
+    padding: 4px 17px;
+    margin-top: 2.25em;
+    margin-bottom: .5em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: var(--main-bg-red);
+}
+.publications .container .publication .name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: .5em;
+}
+.publications .container .publication .authors {
+    font-size: 15px;
+    margin-bottom: .5em;
+}
+.publications .container .publication .info {
+    font-size: 14px;
+    color: var(--main-text-gray);
+    margin-bottom: .5em;
+}
+.publications .container .publication .summary {
+    font-size: 13px;
+    color: var(--main-text-gray);
+    margin-bottom: .5em;
+    text-align: justify;
+}
+
+.carousel-page {
+    height: auto;
+    padding-top: 10.5rem;
+    padding-bottom: 10.5rem;
+    background: var(--main-bg-red);
+    color: #fff;
+    position: relative;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
+.carousel-page .fa-quote-right {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 44px;
+    opacity: .75!important;
+    margin-bottom: 25px
+}
+.carousel-inner {
+    height: 100px;
+    width: 75%;
+    margin-left: 12.5%
+}
+.carousel-caption {
+    top: 50%;
+    left: 8%;
+    right: 8%;
+}
+.carousel-caption h3 {
+    font-size: 17px;
+    text-align: justify;
+    text-align-last: center;
+}
+.carousel-caption p {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px
+}
+.carousel-control-next, .carousel-control-prev {
+    opacity: .75!important;
+}
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    opacity: 1!important;
+}
+
+.contacts {
+    width: 100%;
+    height: auto;
+    padding-top: 13rem;
+    padding-bottom: 12rem;
+    color: var(--main-text-black);
+    text-align: center !important
+}
+.contacts .desktopTitle {
+    font-size: 24px;
+    color: var(--main-text-black);
+    letter-spacing: .2px;
+    display: inline-block
+}
+.contacts .mobileTitle{
+    display: none
+}
+.contacts h3 {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.contacts .submit {
+    border-radius: 2000px;
+    border: 2px solid var(--main-bg-red);
+    background: transparent;
+    color: var(--main-text-black);
+    
+    font-size: 16px;
+    text-decoration: none!important;
+
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    padding: 13px 65px;
+    outline: none!important;
+}
+.contacts .submit:hover {
+    background: var(--main-bg-red);
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 480px) { /* Smartphone */
+    .home .middle {
+        top: 25%;
+        transform: translateY(-25%);
+    }
+    .home .middle h1 {
+        font-size: 9.75vw;
+        margin-bottom: .3rem;
+    }
+    .home .middle h2 {
+        font-size: 6.2vw;
+    }
+    .home .middle h4 {
+        font-size: 4.5vw;
+        margin-top: .3rem
+    }
+    .home img {
+        margin-top: 12px;
+        width: 125px
+    }
+    .home .scroll {
+        font-size: 24px;
+        bottom: 3px
+    }
+    .home .scroll .scroll-down-desktop {
+        display: none
+    }
+    .home .scroll .scroll-down-mobile {
+        display: inline-block;
+        letter-spacing: 4px;
+        font-size: 3.5vw;
+    }
+
+    .presentation {
+        padding-top: 5rem;
+        padding-bottom: 6.5rem
+    }
+    .presentation .container h4 {
+        font-size: 15px;
+        width: 90%;
+        margin-left: 5%
+    }
+
+    .projects {
+        padding-top: 5rem;
+        padding-bottom: 6.5rem
+    }
+    .projects h1 {
+        font-size: 31px;
+    }
+    .projects h5 {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 40px
+    }
+    .projects .row {
+        margin: auto 0
+    }
+    .projects .row .cardBox:not(:first-child) {
+        margin-top: 40px
+    }
+    .projects .row .cardBox .card .card-body h3 {
+        font-size: 20px
+    }
+    .projects .row .cardBox .card .card-body h5 {
+        font-size: 13px;
+        width: auto;
+        margin-left: 0;
+        margin-bottom: .35rem
+    }
+    .projects .row .cardBox .card .card-body p {
+        font-size: 83%
+    }
+
+    .publications .container .publication .name {
+        font-size: 89%;
+    }
+    .publications .container .publication .authors {
+        font-size: 85%;
+    }
+    .publications .container .publication .summary {
+        font-size: 83%;
+    }
+
+    .carousel-inner {
+        height: 162px;
+        width: 100%;
+        margin-left: 0
+    }
+    .carousel-caption p {
+        font-size: 20px;
+    }
+    .carousel-caption h3 {
+        font-size: 99%;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        position: unset;
+        top: unset;
+        bottom: unset;
+        display: contents;
+        width: auto;
+    } 
+    .carousel-control-prev-icon {
+        margin-left: calc(50% - 12px - 4.5vw);
+    }
+    .carousel-control-next-icon {
+        margin-left: 4.5vw;
+    }
+
+    .contacts {
+        padding-top: 6.5rem;
+        padding-bottom: 8rem;
+    }
+    .contacts .container .desktopTitle{
+        font-size: 6.4vw;
+        color: var(--main-text-black);
+        letter-spacing: .2px;
+        display: inline-block;
+        margin-bottom: 16px
+    }
+    .contacts .container .mobileTitle {
+        display: none;
+    }
+    .contacts .container h3 {
+        margin-bottom: 34px;
+        font-size: 19px;
+    }
+    .contacts .submit {
+        font-size: 16px;
+        padding: 2vh 20vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* Tablet */
+    .home .middle h1 {
+        font-size: 42px;
+    }
+    .home .middle h4 {
+        font-size: 20px;
+    }
+    .home .scroll .scroll-down-desktop {
+        display: none
+    }
+    .home .scroll .scroll-down-mobile {
+        display: inline-block;
+        letter-spacing: 4px;
+        font-size: 18px
+    }
+
+    .presentation .container h4 {
+        font-size: 17px;
+    }
+
+    .projects .row {
+        margin: auto 0
+    }
+    .projects .row .cardBox {
+        max-width: 77%;
+        margin-left: 50%;
+        transform: translateX(-50%)
+    }
+    .projects .row .cardBox:not(:first-child) {
+        margin-top: 40px
+    }
+    .projects .row .cardBox .card .card-body h3 {
+        font-size: 24px
+    }
+    .projects .row .cardBox .card .card-body h4 {
+        font-size: 22px
+    }
+    .projects .row .cardBox .card .card-body p {
+        font-size: 16.5px
+    }
+
+    .carousel-page {
+        padding-top: 9.5rem;
+        padding-bottom: 10rem
+    }
+    .carousel-inner {
+        height: 120px
+    }
+
+    .contacts .mobileTitle {
+        display: inline-block;
+        font-size: 27px;
+        letter-spacing: .2px;
+        color: var(--main-text-black);
+    }
+    .contacts .desktopTitle{
+        display: none
+    }
+    .contacts .desktopTitle, .contacts .mobileTitle{
+        margin-bottom: 16px
+    }
+    .contacts h3 {
+        margin-bottom: 34px;
+    }
+}
